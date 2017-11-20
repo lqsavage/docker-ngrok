@@ -3,6 +3,6 @@ trust_host_root_certs: false
 
 tunnels:
   ssh:
-    remote_port: 60001
+    remote_port: 30601
     proto:
       tcp: 22

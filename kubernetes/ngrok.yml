@@ -19,7 +19,7 @@ spec:
           image: 493490470276.dkr.ecr.cn-north-1.amazonaws.com.cn/ngrokd:latest
           ports:
             - containerPort: 30443
-            - containerPort: 60001
+            - containerPort: 30601
 ---
 apiVersion: v1
 kind: Service
@@ -35,8 +35,8 @@ spec:
     nodePort: 30443
     protocol: TCP
   - name: mxdl
-    port: 60001
-    targetPort: 60001
+    port: 30601
+    targetPort: 30601
     nodePort: 30601
     protocol: TCP
   selector:
