@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    image: ngrokd
+    ports:
+      - 30443
+  client:
+    image: ngrok
+    volumes:
+      - ./config:/ngrok/config
