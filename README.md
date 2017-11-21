@@ -1,6 +1,8 @@
 # ngrok client and server container
 
-## Server
+## Directories
+
+**Server**
 
 ```
 /ngrok
@@ -11,7 +13,7 @@
    |- device.key
 ```
 
-## Client
+**Client**
 
 ```
 /ngrok
@@ -19,4 +21,31 @@
    |- ngrok
 |- /config
    |- ngrok.yml
+```
+
+## Server Deployment
+
+```
+make kube_deploy
+```
+
+## Client Getting Started
+
+Create ngrok folder
+
+```
+mkdir -p ngrok && cd $_
+```
+
+Download essential files
+
+```
+curl -O -L https://raw.githubusercontent.com/mixslice/docker-ngrok/master/client/docker-compose.yml
+curl -O -L https://raw.githubusercontent.com/mixslice/docker-ngrok/master/config/ngrok.yml
+```
+
+Then simply run
+
+```
+docker-compose up -d
 ```
