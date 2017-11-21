@@ -1,0 +1,12 @@
+version: '3'
+services:
+  client:
+    image: ngrok
+    restart: always
+    network_mode: "host"
+    volumes:
+      - .:/ngrok/config
+    healthcheck:
+      test: "nc -zv tunnel.mixslice.com 30601"
+      interval: 5s
+      retries: 3
