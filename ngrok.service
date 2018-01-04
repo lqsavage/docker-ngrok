@@ -1,0 +1,13 @@
+[Unit]
+Description=ngrok
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=3
+ExecStart=/usr/local/bin/ngrok -log stdout -log-level ERROR -c /etc/ngrok.yml start-all
+
+[Install]
+WantedBy=multi-user.target
