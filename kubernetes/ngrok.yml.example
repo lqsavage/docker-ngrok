@@ -34,7 +34,7 @@ spec:
     targetPort: 30443
     nodePort: 30443
     protocol: TCP
-  - name: mxdl
+  - name: internal_hostname
     port: 30601
     targetPort: 30601
     nodePort: 30601
